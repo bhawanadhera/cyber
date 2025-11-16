@@ -1,50 +1,23 @@
-import { MongoClient, type Db } from "mongodb"
+import { MongoClient } from "mongodb";
 
-const MONGODB_URI = process.env.MONGODB_URI
-const DB_NAME = process.env.DB_NAME
-
-let cachedClient: MongoClient | null = null
-let cachedDb: Db | null = null
+let cachedClient: MongoClient | null = null;
+let cachedDb: any = null;
 
 export async function connectToDatabase() {
   if (cachedClient && cachedDb) {
-    return { client: cachedClient, db: cachedDb }
+    return { client: cachedClient, db: cachedDb };
   }
 
-  try {
-    const client = new MongoClient(MONGODB_URI)
-    await client.connect()
-    const db = client.db(DB_NAME)
+  const client = new MongoClient(process.env.MONGODB_URI, {
+    tls: true,
+    tlsAllowInvalidCertificates: true,
+  });
 
-    cachedClient = client
-    cachedDb = db
+  await client.connect();
+  const db = client.db(process.env.DB_NAME);
 
-    return { client, db }
-  } catch (error) {
-    console.error("MongoDB connection error:", error)
-    throw error
-  }
-}
+  cachedClient = client;
+  cachedDb = db;
 
-export async function getUserByEmail(email: string) {
-  const { db } = await connectToDatabase()
-  const user = await db.collection("users").findOne({ email })
-  return user
-}
-
-export async function getUserById(userId: string) {
-  const { db } = await connectToDatabase()
-  const { ObjectId } = await import("mongodb")
-  const user = await db.collection("users").findOne({ _id: new ObjectId(userId) })
-  return user
-}
-
-export async function createUser(email: string, password: string) {
-  const { db } = await connectToDatabase()
-  const result = await db.collection("users").insertOne({
-    email,
-    password,
-    createdAt: new Date(),
-  })
-  return result.insertedId.toString()
+  return { client, db };
 }
