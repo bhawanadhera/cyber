@@ -53,17 +53,11 @@ module.exports = mod;
 __turbopack_context__.s([
     "connectToDatabase",
     ()=>connectToDatabase,
-    "createUser",
-    ()=>createUser,
     "getUserByEmail",
-    ()=>getUserByEmail,
-    "getUserById",
-    ()=>getUserById
+    ()=>getUserByEmail
 ]);
 var __TURBOPACK__imported__module__$5b$externals$5d2f$mongodb__$5b$external$5d$__$28$mongodb$2c$__cjs$29$__ = __turbopack_context__.i("[externals]/mongodb [external] (mongodb, cjs)");
 ;
-const MONGODB_URI = process.env.MONGODB_URI;
-const DB_NAME = process.env.DB_NAME;
 let cachedClient = null;
 let cachedDb = null;
 async function connectToDatabase() {
@@ -73,44 +67,24 @@ async function connectToDatabase() {
             db: cachedDb
         };
     }
-    try {
-        const client = new __TURBOPACK__imported__module__$5b$externals$5d2f$mongodb__$5b$external$5d$__$28$mongodb$2c$__cjs$29$__["MongoClient"](MONGODB_URI);
-        await client.connect();
-        const db = client.db(DB_NAME);
-        cachedClient = client;
-        cachedDb = db;
-        return {
-            client,
-            db
-        };
-    } catch (error) {
-        console.error("MongoDB connection error:", error);
-        throw error;
-    }
+    const client = new __TURBOPACK__imported__module__$5b$externals$5d2f$mongodb__$5b$external$5d$__$28$mongodb$2c$__cjs$29$__["MongoClient"](process.env.MONGODB_URI, {
+        tls: true,
+        tlsAllowInvalidCertificates: true
+    });
+    await client.connect();
+    const db = client.db(process.env.DB_NAME);
+    cachedClient = client;
+    cachedDb = db;
+    return {
+        client,
+        db
+    };
 }
 async function getUserByEmail(email) {
     const { db } = await connectToDatabase();
-    const user = await db.collection("users").findOne({
+    return await db.collection("users").findOne({
         email
     });
-    return user;
-}
-async function getUserById(userId) {
-    const { db } = await connectToDatabase();
-    const { ObjectId } = await __turbopack_context__.A("[externals]/mongodb [external] (mongodb, cjs, async loader)");
-    const user = await db.collection("users").findOne({
-        _id: new ObjectId(userId)
-    });
-    return user;
-}
-async function createUser(email, password) {
-    const { db } = await connectToDatabase();
-    const result = await db.collection("users").insertOne({
-        email,
-        password,
-        createdAt: new Date()
-    });
-    return result.insertedId.toString();
 }
 }),
 "[externals]/crypto [external] (crypto, cjs)", ((__turbopack_context__, module, exports) => {

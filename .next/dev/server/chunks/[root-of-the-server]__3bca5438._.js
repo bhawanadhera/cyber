@@ -52,7 +52,9 @@ module.exports = mod;
 
 __turbopack_context__.s([
     "connectToDatabase",
-    ()=>connectToDatabase
+    ()=>connectToDatabase,
+    "getUserByEmail",
+    ()=>getUserByEmail
 ]);
 var __TURBOPACK__imported__module__$5b$externals$5d2f$mongodb__$5b$external$5d$__$28$mongodb$2c$__cjs$29$__ = __turbopack_context__.i("[externals]/mongodb [external] (mongodb, cjs)");
 ;
@@ -77,6 +79,12 @@ async function connectToDatabase() {
         client,
         db
     };
+}
+async function getUserByEmail(email) {
+    const { db } = await connectToDatabase();
+    return await db.collection("users").findOne({
+        email
+    });
 }
 }),
 "[externals]/crypto [external] (crypto, cjs)", ((__turbopack_context__, module, exports) => {
