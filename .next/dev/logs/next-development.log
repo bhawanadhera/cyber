@@ -1,7 +1,1 @@
-[00:00:00.572] Server  LOG      ✓ Ready in 370ms
-[00:00:11.784] Server  WARN     ⚠ Cross origin request detected from vq672d-3000.csb.app to /_next/* resource. In a future major version of Next.js, you will need to explicitly configure "allowedDevOrigins" in next.config to allow this.
-Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allowedDevOrigins
-[00:01:00.234] Server  ERROR   MongoDB connection error: MongoServerSelectionError: 407834B6997F0000:error:0A000438:SSL routines:ssl3_read_bytes:tlsv1 alert internal error:../deps/openssl/openssl/ssl/record/rec_layer_s3.c:1590:SSL alert number 80
-
-[00:01:00.309] Server  ERROR   Login error: MongoServerSelectionError: 407834B6997F0000:error:0A000438:SSL routines:ssl3_read_bytes:tlsv1 alert internal error:../deps/openssl/openssl/ssl/record/rec_layer_s3.c:1590:SSL alert number 80
-
+[00:00:00.730] Server  LOG      ✓ Ready in 478ms
