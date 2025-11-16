@@ -26,3 +26,9 @@ Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allow
 [00:29:28.154] Server  ERROR   Login error: MongoServerSelectionError: 40589F0BAB7F0000:error:0A000438:SSL routines:ssl3_read_bytes:tlsv1 alert internal error:../deps/openssl/openssl/ssl/record/rec_layer_s3.c:1590:SSL alert number 80
 
 [00:33:43.849] Server  LOG        Reload env: .env
+[00:33:59.997] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:34:51.430] Server  ERROR   MongoDB connection error: MongoServerSelectionError: 40589F0BAB7F0000:error:0A000438:SSL routines:ssl3_read_bytes:tlsv1 alert internal error:../deps/openssl/openssl/ssl/record/rec_layer_s3.c:1590:SSL alert number 80
+
+[00:34:51.497] Server  ERROR   Login error: MongoServerSelectionError: 40589F0BAB7F0000:error:0A000438:SSL routines:ssl3_read_bytes:tlsv1 alert internal error:../deps/openssl/openssl/ssl/record/rec_layer_s3.c:1590:SSL alert number 80
+
+[00:35:26.949] Server  LOG        Reload env: .env
