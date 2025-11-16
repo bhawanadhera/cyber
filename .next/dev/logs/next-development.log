@@ -1,39 +1,5 @@
-[00:00:00.730] Server  LOG      ✓ Ready in 478ms
-[00:00:51.256] Server  WARN     ⚠ Cross origin request detected from zpn4vf-3000.csb.app to /_next/* resource. In a future major version of Next.js, you will need to explicitly configure "allowedDevOrigins" in next.config to allow this.
+[00:00:01.293] Server  LOG      ✓ Ready in 868ms
+[00:00:01.942] Server  WARN     ⚠ Cross origin request detected from zpn4vf-3000.csb.app to /_next/* resource. In a future major version of Next.js, you will need to explicitly configure "allowedDevOrigins" in next.config to allow this.
 Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allowedDevOrigins
-[00:00:51.499] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:01:40.225] Server  ERROR   MongoDB connection error: MongoServerSelectionError: 40589F0BAB7F0000:error:0A000438:SSL routines:ssl3_read_bytes:tlsv1 alert internal error:../deps/openssl/openssl/ssl/record/rec_layer_s3.c:1590:SSL alert number 80
-
-[00:01:40.321] Server  ERROR   Login error: MongoServerSelectionError: 40589F0BAB7F0000:error:0A000438:SSL routines:ssl3_read_bytes:tlsv1 alert internal error:../deps/openssl/openssl/ssl/record/rec_layer_s3.c:1590:SSL alert number 80
-
-[00:04:51.275] Server  ERROR   MongoDB connection error: MongoServerSelectionError: 40589F0BAB7F0000:error:0A000438:SSL routines:ssl3_read_bytes:tlsv1 alert internal error:../deps/openssl/openssl/ssl/record/rec_layer_s3.c:1590:SSL alert number 80
-
-[00:04:51.350] Server  ERROR   Login error: MongoServerSelectionError: 40589F0BAB7F0000:error:0A000438:SSL routines:ssl3_read_bytes:tlsv1 alert internal error:../deps/openssl/openssl/ssl/record/rec_layer_s3.c:1590:SSL alert number 80
-
-[00:14:50.440] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:15:23.633] Server  ERROR   MongoDB connection error: MongoServerSelectionError: 40589F0BAB7F0000:error:0A000438:SSL routines:ssl3_read_bytes:tlsv1 alert internal error:../deps/openssl/openssl/ssl/record/rec_layer_s3.c:1590:SSL alert number 80
-
-[00:15:23.709] Server  ERROR   Login error: MongoServerSelectionError: 40589F0BAB7F0000:error:0A000438:SSL routines:ssl3_read_bytes:tlsv1 alert internal error:../deps/openssl/openssl/ssl/record/rec_layer_s3.c:1590:SSL alert number 80
-
-[00:22:12.468] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:22:58.455] Server  ERROR   MongoDB connection error: MongoServerSelectionError: 40589F0BAB7F0000:error:0A000438:SSL routines:ssl3_read_bytes:tlsv1 alert internal error:../deps/openssl/openssl/ssl/record/rec_layer_s3.c:1590:SSL alert number 80
-
-[00:22:58.535] Server  ERROR   Login error: MongoServerSelectionError: 40589F0BAB7F0000:error:0A000438:SSL routines:ssl3_read_bytes:tlsv1 alert internal error:../deps/openssl/openssl/ssl/record/rec_layer_s3.c:1590:SSL alert number 80
-
-[00:28:47.003] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:29:28.089] Server  ERROR   MongoDB connection error: MongoServerSelectionError: 40589F0BAB7F0000:error:0A000438:SSL routines:ssl3_read_bytes:tlsv1 alert internal error:../deps/openssl/openssl/ssl/record/rec_layer_s3.c:1590:SSL alert number 80
-
-[00:29:28.154] Server  ERROR   Login error: MongoServerSelectionError: 40589F0BAB7F0000:error:0A000438:SSL routines:ssl3_read_bytes:tlsv1 alert internal error:../deps/openssl/openssl/ssl/record/rec_layer_s3.c:1590:SSL alert number 80
-
-[00:33:43.849] Server  LOG        Reload env: .env
-[00:33:59.997] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:34:51.430] Server  ERROR   MongoDB connection error: MongoServerSelectionError: 40589F0BAB7F0000:error:0A000438:SSL routines:ssl3_read_bytes:tlsv1 alert internal error:../deps/openssl/openssl/ssl/record/rec_layer_s3.c:1590:SSL alert number 80
-
-[00:34:51.497] Server  ERROR   Login error: MongoServerSelectionError: 40589F0BAB7F0000:error:0A000438:SSL routines:ssl3_read_bytes:tlsv1 alert internal error:../deps/openssl/openssl/ssl/record/rec_layer_s3.c:1590:SSL alert number 80
-
-[00:35:26.949] Server  LOG        Reload env: .env
-[00:35:54.322] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:36:50.436] Server  ERROR   MongoDB connection error: MongoServerSelectionError: 40589F0BAB7F0000:error:0A000438:SSL routines:ssl3_read_bytes:tlsv1 alert internal error:../deps/openssl/openssl/ssl/record/rec_layer_s3.c:1590:SSL alert number 80
-
-[00:36:50.509] Server  ERROR   Login error: MongoServerSelectionError: 40589F0BAB7F0000:error:0A000438:SSL routines:ssl3_read_bytes:tlsv1 alert internal error:../deps/openssl/openssl/ssl/record/rec_layer_s3.c:1590:SSL alert number 80
-
+[00:00:06.093] Server  LOG      ○ Compiling /login ...
+[00:00:20.816] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
