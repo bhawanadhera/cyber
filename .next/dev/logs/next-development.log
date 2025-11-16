@@ -1,11 +1,121 @@
-[00:00:00.625] Server  LOG      ✓ Ready in 403ms
-[00:00:26.866] Server  WARN     ⚠ Cross origin request detected from zpn4vf-3000.csb.app to /_next/* resource. In a future major version of Next.js, you will need to explicitly configure "allowedDevOrigins" in next.config to allow this.
+[00:00:04.564] Server  LOG      ✓ Ready in 4.2s
+[00:00:08.067] Server  LOG      ○ Compiling / ...
+[00:00:11.743] Server  WARN     ⚠ Cross origin request detected from zpn4vf-3000.csb.app to /_next/* resource. In a future major version of Next.js, you will need to explicitly configure "allowedDevOrigins" in next.config to allow this.
 Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allowedDevOrigins
-[00:01:38.718] Server  ERROR   MongoDB connection error: MongoServerSelectionError: 4078FE454D7F0000:error:0A000438:SSL routines:ssl3_read_bytes:tlsv1 alert internal error:../deps/openssl/openssl/ssl/record/rec_layer_s3.c:1590:SSL alert number 80
+[00:00:12.774] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:29.879] Server  ERROR    ⨯ ./app/api/auth/login/route.ts:2:1
+Export getUserByEmail doesn't exist in target module
+  1 | import { type NextRequest, NextResponse } from "next/server"
+> 2 | import { getUserByEmail } from "@/lib/db"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 | import { comparePasswords } from "@/lib/password"
+  4 | import { createToken, setAuthTokenCookie } from "@/lib/auth"
+  5 |
 
-[00:01:38.803] Server  ERROR   Login error: MongoServerSelectionError: 4078FE454D7F0000:error:0A000438:SSL routines:ssl3_read_bytes:tlsv1 alert internal error:../deps/openssl/openssl/ssl/record/rec_layer_s3.c:1590:SSL alert number 80
+The export getUserByEmail was not found in module [project]/lib/db.ts [app-route] (ecmascript).
+Did you mean to import connectToDatabase?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
 
-[00:10:35.533] Server  ERROR   MongoDB connection error: MongoServerSelectionError: 4078FE454D7F0000:error:0A000438:SSL routines:ssl3_read_bytes:tlsv1 alert internal error:../deps/openssl/openssl/ssl/record/rec_layer_s3.c:1590:SSL alert number 80
 
-[00:10:35.607] Server  ERROR   Login error: MongoServerSelectionError: 4078FE454D7F0000:error:0A000438:SSL routines:ssl3_read_bytes:tlsv1 alert internal error:../deps/openssl/openssl/ssl/record/rec_layer_s3.c:1590:SSL alert number 80
+[00:00:30.257] Browser ERROR   ./app/api/auth/login/route.ts:2:1
+Export getUserByEmail doesn't exist in target module
+  1 | import { type NextRequest, NextResponse } from "next/server"
+> 2 | import { getUserByEmail } from "@/lib/db"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 | import { comparePasswords } from "@/lib/password"
+  4 | import { createToken, setAuthTokenCookie } from "@/lib/auth"
+  5 |
 
+The export getUserByEmail was not found in module [project]/lib/db.ts [app-route] (ecmascript).
+Did you mean to import connectToDatabase?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+[00:00:30.953] Browser ERROR   ./app/api/auth/login/route.ts:2:1
+Export getUserByEmail doesn't exist in target module
+  1 | import { type NextRequest, NextResponse } from "next/server"
+> 2 | import { getUserByEmail } from "@/lib/db"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 | import { comparePasswords } from "@/lib/password"
+  4 | import { createToken, setAuthTokenCookie } from "@/lib/auth"
+  5 |
+
+The export getUserByEmail was not found in module [project]/lib/db.ts [app-route] (ecmascript).
+Did you mean to import connectToDatabase?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+[00:00:30.953] Browser ERROR   ./app/api/auth/login/route.ts:2:1
+Export getUserByEmail doesn't exist in target module
+  1 | import { type NextRequest, NextResponse } from "next/server"
+> 2 | import { getUserByEmail } from "@/lib/db"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 | import { comparePasswords } from "@/lib/password"
+  4 | import { createToken, setAuthTokenCookie } from "@/lib/auth"
+  5 |
+
+The export getUserByEmail was not found in module [project]/lib/db.ts [app-route] (ecmascript).
+Did you mean to import connectToDatabase?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+[00:00:31.292] Browser ERROR   ./app/api/auth/login/route.ts:2:1
+Export getUserByEmail doesn't exist in target module
+  1 | import { type NextRequest, NextResponse } from "next/server"
+> 2 | import { getUserByEmail } from "@/lib/db"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 | import { comparePasswords } from "@/lib/password"
+  4 | import { createToken, setAuthTokenCookie } from "@/lib/auth"
+  5 |
+
+The export getUserByEmail was not found in module [project]/lib/db.ts [app-route] (ecmascript).
+Did you mean to import connectToDatabase?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+[00:00:31.833] Browser ERROR   ./app/api/auth/login/route.ts:2:1
+Export getUserByEmail doesn't exist in target module
+  1 | import { type NextRequest, NextResponse } from "next/server"
+> 2 | import { getUserByEmail } from "@/lib/db"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 | import { comparePasswords } from "@/lib/password"
+  4 | import { createToken, setAuthTokenCookie } from "@/lib/auth"
+  5 |
+
+The export getUserByEmail was not found in module [project]/lib/db.ts [app-route] (ecmascript).
+Did you mean to import connectToDatabase?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+[00:00:31.833] Browser ERROR   ./app/api/auth/login/route.ts:2:1
+Export getUserByEmail doesn't exist in target module
+  1 | import { type NextRequest, NextResponse } from "next/server"
+> 2 | import { getUserByEmail } from "@/lib/db"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 | import { comparePasswords } from "@/lib/password"
+  4 | import { createToken, setAuthTokenCookie } from "@/lib/auth"
+  5 |
+
+The export getUserByEmail was not found in module [project]/lib/db.ts [app-route] (ecmascript).
+Did you mean to import connectToDatabase?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+[00:00:31.833] Browser ERROR   ./app/api/auth/login/route.ts:2:1
+Export getUserByEmail doesn't exist in target module
+  1 | import { type NextRequest, NextResponse } from "next/server"
+> 2 | import { getUserByEmail } from "@/lib/db"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 | import { comparePasswords } from "@/lib/password"
+  4 | import { createToken, setAuthTokenCookie } from "@/lib/auth"
+  5 |
+
+The export getUserByEmail was not found in module [project]/lib/db.ts [app-route] (ecmascript).
+Did you mean to import connectToDatabase?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+[00:00:31.833] Browser ERROR   ./app/api/auth/login/route.ts:2:1
+Export getUserByEmail doesn't exist in target module
+  1 | import { type NextRequest, NextResponse } from "next/server"
+> 2 | import { getUserByEmail } from "@/lib/db"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 | import { comparePasswords } from "@/lib/password"
+  4 | import { createToken, setAuthTokenCookie } from "@/lib/auth"
+  5 |
+
+The export getUserByEmail was not found in module [project]/lib/db.ts [app-route] (ecmascript).
+Did you mean to import connectToDatabase?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+[00:00:44.349] Server  LOG     
+[00:00:44.349] Server  LOG     Could not open route.ts in the editor.
+[00:00:44.350] Server  LOG     The editor process exited with an error: Terminal editors can only be used on macOS.
+[00:00:44.350] Server  LOG     
+[00:00:44.350] Server  LOG     To set up the editor integration, add something like REACT_EDITOR=atom to the .env.local file in your project folder and restart the development server.
+[00:00:44.350] Server  LOG     
