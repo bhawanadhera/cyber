@@ -248,3 +248,65 @@ Export getUserByEmail doesn't exist in target module
 The export getUserByEmail was not found in module [project]/lib/db.ts [app-route] (ecmascript).
 Did you mean to import connectToDatabase?
 All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+[00:02:04.451] Browser ERROR   uncaughtError: Error: ./app/api/auth/signup/route.ts:2:1
+Export createUser doesn't exist in target module
+  1 | import { type NextRequest, NextResponse } from "next/server"
+> 2 | import { getUserByEmail, createUser } from "@/lib/db"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 | import { hashPassword } from "@/lib/password"
+  4 | import { createToken, setAuthTokenCookie } from "@/lib/auth"
+  5 |
+
+The export createUser was not found in module [project]/lib/db.ts [app-route] (ecmascript).
+Did you mean to import connectToDatabase?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+
+[00:02:04.665] Browser ERROR   ./app/api/auth/signup/route.ts:2:1
+Export createUser doesn't exist in target module
+  1 | import { type NextRequest, NextResponse } from "next/server"
+> 2 | import { getUserByEmail, createUser } from "@/lib/db"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 | import { hashPassword } from "@/lib/password"
+  4 | import { createToken, setAuthTokenCookie } from "@/lib/auth"
+  5 |
+
+The export createUser was not found in module [project]/lib/db.ts [app-route] (ecmascript).
+Did you mean to import connectToDatabase?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+[00:02:04.665] Browser ERROR   ./app/api/auth/signup/route.ts:2:1
+Export getUserByEmail doesn't exist in target module
+  1 | import { type NextRequest, NextResponse } from "next/server"
+> 2 | import { getUserByEmail, createUser } from "@/lib/db"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 | import { hashPassword } from "@/lib/password"
+  4 | import { createToken, setAuthTokenCookie } from "@/lib/auth"
+  5 |
+
+The export getUserByEmail was not found in module [project]/lib/db.ts [app-route] (ecmascript).
+Did you mean to import connectToDatabase?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+[00:02:04.886] Browser ERROR   ./app/api/auth/signup/route.ts:2:1
+Export createUser doesn't exist in target module
+  1 | import { type NextRequest, NextResponse } from "next/server"
+> 2 | import { getUserByEmail, createUser } from "@/lib/db"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 | import { hashPassword } from "@/lib/password"
+  4 | import { createToken, setAuthTokenCookie } from "@/lib/auth"
+  5 |
+
+The export createUser was not found in module [project]/lib/db.ts [app-route] (ecmascript).
+Did you mean to import connectToDatabase?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+[00:02:04.886] Browser ERROR   ./app/api/auth/signup/route.ts:2:1
+Export getUserByEmail doesn't exist in target module
+  1 | import { type NextRequest, NextResponse } from "next/server"
+> 2 | import { getUserByEmail, createUser } from "@/lib/db"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 | import { hashPassword } from "@/lib/password"
+  4 | import { createToken, setAuthTokenCookie } from "@/lib/auth"
+  5 |
+
+The export getUserByEmail was not found in module [project]/lib/db.ts [app-route] (ecmascript).
+Did you mean to import connectToDatabase?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
