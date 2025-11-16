@@ -50,41 +50,39 @@ module.exports = mod;
 "[project]/lib/db.ts [app-route] (ecmascript)", ((__turbopack_context__) => {
 "use strict";
 
+// lib/db.ts
 __turbopack_context__.s([
     "connectToDatabase",
-    ()=>connectToDatabase,
-    "getUserByEmail",
-    ()=>getUserByEmail
+    ()=>connectToDatabase
 ]);
 var __TURBOPACK__imported__module__$5b$externals$5d2f$mongodb__$5b$external$5d$__$28$mongodb$2c$__cjs$29$__ = __turbopack_context__.i("[externals]/mongodb [external] (mongodb, cjs)");
 ;
-let cachedClient = null;
-let cachedDb = null;
+const uri = process.env.MONGODB_URI;
+const dbName = process.env.DB_NAME; // you shared DB_NAME; use that name
+if (!uri) throw new Error("MONGODB_URI is not set");
+if (!dbName) throw new Error("DB_NAME is not set");
+const globalForMongo = globalThis;
+const cached = globalForMongo._mongo ?? {
+    client: null,
+    promise: null
+};
+globalForMongo._mongo = cached;
 async function connectToDatabase() {
-    if (cachedClient && cachedDb) {
+    if (cached.client) {
         return {
-            client: cachedClient,
-            db: cachedDb
+            client: cached.client,
+            db: cached.client.db(dbName)
         };
     }
-    const client = new __TURBOPACK__imported__module__$5b$externals$5d2f$mongodb__$5b$external$5d$__$28$mongodb$2c$__cjs$29$__["MongoClient"](process.env.MONGODB_URI, {
-        tls: true,
-        tlsAllowInvalidCertificates: true
-    });
-    await client.connect();
-    const db = client.db(process.env.DB_NAME);
-    cachedClient = client;
-    cachedDb = db;
+    if (!cached.promise) {
+        cached.promise = __TURBOPACK__imported__module__$5b$externals$5d2f$mongodb__$5b$external$5d$__$28$mongodb$2c$__cjs$29$__["MongoClient"].connect(uri);
+    }
+    const client = await cached.promise;
+    cached.client = client;
     return {
         client,
-        db
+        db: client.db(dbName)
     };
-}
-async function getUserByEmail(email) {
-    const { db } = await connectToDatabase();
-    return await db.collection("users").findOne({
-        email
-    });
 }
 }),
 "[externals]/crypto [external] (crypto, cjs)", ((__turbopack_context__, module, exports) => {

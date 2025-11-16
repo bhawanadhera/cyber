@@ -2,7 +2,7 @@
 import { MongoClient, Db } from "mongodb";
 
 const uri = process.env.MONGODB_URI as string;
-const dbName = process.env.DB_NAME as string; // you shared DB_NAME; use that name
+const dbName = process.env.DB_NAME as string;
 
 if (!uri) throw new Error("MONGODB_URI is not set");
 if (!dbName) throw new Error("DB_NAME is not set");
@@ -19,13 +19,31 @@ export async function connectToDatabase(): Promise<{
   client: MongoClient;
   db: Db;
 }> {
-  if (cached.client) {
+  if (cached.client)
     return { client: cached.client, db: cached.client.db(dbName) };
-  }
-  if (!cached.promise) {
-    cached.promise = MongoClient.connect(uri);
-  }
+  if (!cached.promise) cached.promise = MongoClient.connect(uri);
   const client = await cached.promise;
   cached.client = client;
   return { client, db: client.db(dbName) };
+}
+
+// Named export used by your route
+export async function getUserByEmail(email: string) {
+  const { db } = await connectToDatabase();
+  return db.collection("users").findOne({ email });
+}
+
+// Named export used by your route
+export async function createUser(userData: {
+  email: string;
+  password: string;
+  name?: string;
+}) {
+  const { db } = await connectToDatabase();
+  const existing = await db
+    .collection("users")
+    .findOne({ email: userData.email });
+  if (existing) throw new Error("User already exists");
+  const result = await db.collection("users").insertOne(userData);
+  return result;
 }
