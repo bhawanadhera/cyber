@@ -1,5 +1,1 @@
-[00:00:01.293] Server  LOG      ✓ Ready in 868ms
-[00:00:01.942] Server  WARN     ⚠ Cross origin request detected from zpn4vf-3000.csb.app to /_next/* resource. In a future major version of Next.js, you will need to explicitly configure "allowedDevOrigins" in next.config to allow this.
-Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allowedDevOrigins
-[00:00:06.093] Server  LOG      ○ Compiling /login ...
-[00:00:20.816] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:00.625] Server  LOG      ✓ Ready in 403ms
