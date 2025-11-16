@@ -1,29 +1,21 @@
-import { MongoClient } from "mongodb";
+import { connectToDatabase } from "./db"; // already export hai
 
-let cachedClient: MongoClient | null = null;
-let cachedDb: any = null;
+// Users collection me naya user create karne ka function
+export async function createUser(userData: {
+  email: string;
+  password: string;
+  name?: string;
+}) {
+  const { db } = await connectToDatabase();
 
-export async function connectToDatabase() {
-  if (cachedClient && cachedDb) {
-    return { client: cachedClient, db: cachedDb };
+  // Check if user already exists (optional)
+  const existingUser = await db
+    .collection("users")
+    .findOne({ email: userData.email });
+  if (existingUser) {
+    throw new Error("User already exists");
   }
 
-  const client = new MongoClient(process.env.MONGODB_URI, {
-    tls: true,
-    tlsAllowInvalidCertificates: true, // Codesandbox SSL handshake ke liye
-  });
-
-  await client.connect();
-  const db = client.db(process.env.DB_NAME);
-
-  cachedClient = client;
-  cachedDb = db;
-
-  return { client, db };
-}
-
-// Ab getUserByEmail bhi export karo
-export async function getUserByEmail(email: string) {
-  const { db } = await connectToDatabase();
-  return await db.collection("users").findOne({ email });
+  const result = await db.collection("users").insertOne(userData);
+  return result;
 }
