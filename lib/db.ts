@@ -10,7 +10,7 @@ export async function connectToDatabase() {
 
   const client = new MongoClient(process.env.MONGODB_URI, {
     tls: true,
-    tlsAllowInvalidCertificates: true,
+    tlsAllowInvalidCertificates: true, // Codesandbox SSL handshake ke liye
   });
 
   await client.connect();
@@ -20,4 +20,10 @@ export async function connectToDatabase() {
   cachedDb = db;
 
   return { client, db };
+}
+
+// Ab getUserByEmail bhi export karo
+export async function getUserByEmail(email: string) {
+  const { db } = await connectToDatabase();
+  return await db.collection("users").findOne({ email });
 }
